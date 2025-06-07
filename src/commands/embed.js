@@ -119,7 +119,7 @@ try {
             interaction.reply({ embeds: [gönderilenembedler], ephemeral: true });
 
 } catch (error) {
-    return interaction.reply(`Üzgünüm Bir Sorun Oluştu 904'e Söyle. \`💥\``) 
+    return interaction.reply(`Üzgünüm Bir Sorun Oluştu Hawk Development ile İletişime Geç. \`💥\``) 
 
 }
 

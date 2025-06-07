@@ -38,8 +38,8 @@ module.exports = {
             const embed = new EmbedBuilder()
             .setThumbnail(target.user.displayAvatarURL({dynamic: true, size: 512}))
             .setDescription(`**ID:** ${target.user.id} \n\n **Rolleri:** ${target.roles.cache.map(r => r).join(" ").replace("@everyone", " ") || "Rolleri Yok."} \n\n **Sunucuya Giriş Tarihi:** <t:${parseInt(target.joinedTimestamp / 1000)}:R> \n\n**Hex Bilgisi:** ${hex} \n\n **Hesap Oluşturma Tarihi:** <t:${parseInt(target.user.createdTimestamp / 1000)}:R>  `)
-            .setAuthor({name: `9 0 4's Development`, iconURL: `${target.guild.iconURL()}`})
-            .setFooter({text: `9 0 4's Development`, iconURL: `${target.guild.iconURL()}`})
+            .setAuthor({name: `Hawk Development`, iconURL: `${target.guild.iconURL()}`})
+            .setFooter({text: `Hawk Development`, iconURL: `${target.guild.iconURL()}`})
             .setTimestamp()
             .setColor('NotQuiteBlack')
         

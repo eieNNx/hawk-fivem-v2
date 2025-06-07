@@ -4,7 +4,6 @@ const { renk } = require("../config.js");
 const db = new QuickDB();
 const config = require("../config.js");
 const Log = require('../models/Log.js');
-const setupSchema = require('../models/setupschema.js');
 const sistemdb = require("../models/sistemdb.js")
 const { Database } = require("ark.db");
 const db2 = new Database("../emoji.json");
@@ -14,7 +13,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName("loglarıkur")
         .setDMPermission(false)
-        .setDescription("904'e Özel Komuttur. Kullanamazsınız."),
+        .setDescription("Hawk Development'a Özel Komuttur. Kullanamazsınız."),
 
         run: async (client, interaction, args, message) => {
 
@@ -22,7 +21,7 @@ module.exports = {
             await interaction.deferReply({ephemeral: true})
 
 
-            if(interaction.member.id !== "836953972861698138") return interaction.editReply({content: `> **Bu Komut __904__ Bot Sahibine Özeldir.**`, ephemeral: true})
+            if(interaction.member.id !== "315213314038824960") return interaction.editReply({content: `> **Bu Komut __Hawk Development__ Bot Sahibine Özeldir.**`, ephemeral: true})
      
 
             const category2 = await interaction.guild.channels.create({
@@ -51,7 +50,7 @@ module.exports = {
 
             const category = await interaction.guild.channels.create({
                 type: ChannelType.GuildCategory,
-                name: `904 LOGS`,
+                name: `Hawk LOGS`,
                 permissionOverwrites: [
           
                      {
@@ -183,7 +182,7 @@ module.exports = {
 
              const ayarlanacakKanallar = await interaction.guild.channels.create({
                 type: ChannelType.GuildText,
-                name: '904-yardım',
+                name: 'Hawk-yardım',
                 parent: category,
             });
 
@@ -236,7 +235,7 @@ module.exports = {
                 { name: "icidoluorta", url: "https://cdn.discordapp.com/emojis/1206408364771512341.webp?size=96&quality=lossless" },
                 { name: "icidolusol", url: "https://cdn.discordapp.com/emojis/1206408370299342878.webp?size=96&quality=lossless" },
                 { name: "icidolusag", url: "https://cdn.discordapp.com/emojis/1206408369032658965.webp?size=96&quality=lossless" },
-                { name: "904", url: "https://cdn.discordapp.com/emojis/1379047535703756862.webp?size=96"},
+                { name: "Hawk", url: "https://cdn.discordapp.com/emojis/1379047535703756862.webp?size=96"},
             ]
 
             emojis.forEach(async (x) => {

@@ -51,7 +51,7 @@ module.exports = {
             interaction.editReply(`> **Başarıyla ${steamHex} Yasaklı Hex Listesine Eklendi.**`);
           } catch (err) {
             console.error('Hata:', err);
-            interaction.editReply(`> **Hex Yasaklarken Bir Sorun Oluştu, __904__ İle Görüşün.**`);
+            interaction.editReply(`> **Hex Yasaklarken Bir Sorun Oluştu, __Hawk Development__ İle İletişime Geçin.**`);
           }
         
     

@@ -60,7 +60,7 @@ try {
 
 } catch (error) {
     console.log(`Rolkaydet Komutunda Sorun Oluştu. ${error}`)
-    return interaction.editReply(`Bir Sorun Oluştu 904'e Ulaş \`💥\``)
+    return interaction.editReply(`Bir Sorun Oluştu Hawk Development'a Ulaş \`💥\``)
 }
 
 

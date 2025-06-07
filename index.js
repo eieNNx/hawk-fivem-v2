@@ -90,7 +90,7 @@ client.on("ready", async () => {
         } catch (error) {
             console.error(error);
         }
-    log(`${client.user.username} ${commands.length} Komutla Birlikte Aktif Edildi! (904 Development)`);
+    log(`${client.user.username} ${commands.length} Komutla Birlikte Aktif Edildi! (Hawk Development)`);
 })
 
 readdirSync('./src/events').forEach(async file => {
@@ -347,7 +347,7 @@ client.on(Events.InteractionCreate, async interaction =>{
 			  }
 		
 			  const embed = new EmbedBuilder()
-			  .setColor(`BLACK`)
+			  .setColor(`#000000`)
 			  .setAuthor({ name: `${interaction.guild.name}`, iconURL: `${interaction.guild.iconURL()}`})
 			  .setTitle('Kayıt Puan Sıralaması')
 			  .setImage(`${sunucubanner}`)
@@ -604,7 +604,7 @@ if(interaction.customId === "logkanalları") {
 }
 
 
-//Ticket System 9 0 4's Development
+//Ticket System Hawk Development
 	                                    const row = new ActionRowBuilder()
 										.addComponents(
 											new StringSelectMenuBuilder()
@@ -698,7 +698,7 @@ if(interaction.customId === "logkanalları") {
 												const attachment = await discordTranscripts.createTranscript(channel, {
 													limit: -1, 
 													returnType: 'attachment', 
-													filename: `904_${interaction.channel.id}_${channel.name}.html`, 
+													filename: `Hawk_${interaction.channel.id}_${channel.name}.html`, 
 													poweredBy: false,
 													saveImages: true, 
 												});
@@ -726,7 +726,7 @@ try {
 
 	const output = messages.map(m => `${new Date(m.createdAt).toLocaleString('tr-TR')} - ${m.author.tag}: ${m.attachments.size > 0 ? m.attachments.first().proxyURL : m.content}`).join('\n');
 
-	const atc = new AttachmentBuilder(Buffer.from(output), { name: '904log.txt' })
+	const atc = new AttachmentBuilder(Buffer.from(output), { name: 'Hawklog.txt' })
 
 	const embed = new EmbedBuilder()
 	.setAuthor({name: `Ticket Adı: ${interaction.channel.name}`,iconURL: `${sunucuiconurl}`})
@@ -750,7 +750,7 @@ try {
 
 												const output = messages.map(m => `${new Date(m.createdAt).toLocaleString('tr-TR')} - ${m.author.tag}: ${m.attachments.size > 0 ? m.attachments.first().proxyURL : m.content}`).join('\n');
 
-												const atc = new AttachmentBuilder(Buffer.from(output), { name: '904log.txt' })
+												const atc = new AttachmentBuilder(Buffer.from(output), { name: 'Hawklog.txt' })
 
 												const embed = new EmbedBuilder()
 												.setAuthor({name: `Ticket Adı: ${interaction.channel.name}`,iconURL: `${sunucuiconurl}`})
@@ -1365,23 +1365,23 @@ ctx.fill();
 let tag = member.user.tag.replace(/#\d+/, '');
 let davetedentag = davetusername;
 
-const icon = await loadImage(`https://904.com.tr/resimler/904_uyari.png`)
+const icon = await loadImage(`https://Hawk.com.tr/resimler/Hawk_uyari.png`)
 const iconSize = 50;
 const iconX = 270;
 const iconY = 294;
 
 
-const icon2 = await loadImage(`https://904.com.tr/resimler/904_uyesayisi.png?`)
+const icon2 = await loadImage(`https://Hawk.com.tr/resimler/Hawk_uyesayisi.png?`)
 const iconSize2 = 50;
 const iconX2 = 270;
 const iconY2 = 230;
 
-const icon3 = await loadImage(`https://904.com.tr/resimler/904_davet.png`)
+const icon3 = await loadImage(`https://Hawk.com.tr/resimler/Hawk_davet.png`)
 const iconSize3 = 65;
 const iconX3 = 255;
 const iconY3 = 167;
 
-const icon4 = await loadImage(`https://904.com.tr/resimler/904_giris.png`)
+const icon4 = await loadImage(`https://Hawk.com.tr/resimler/Hawk_giris.png`)
 const iconSize4 = 65;
 const iconX4 = 260;
 const iconY4 = 108;
@@ -1427,8 +1427,8 @@ ctx.drawImage(avatar, avatarX, avatarY, avatarSize, avatarSize);
 	ctx.fillText(`Oluşturma Tarih: ${kuruluş2}`, 330, 330);
 
 
-	const attachment = new AttachmentBuilder(canvas.toBuffer(), { name: '904.png' });
-	exampleEmbed.setImage('attachment://904.png');
+	const attachment = new AttachmentBuilder(canvas.toBuffer(), { name: 'Hawk.png' });
+	exampleEmbed.setImage('attachment://Hawk.png');
 
 	const embed222 = new EmbedBuilder()
 	.setThumbnail(member.displayAvatarURL())
@@ -1437,17 +1437,17 @@ ctx.drawImage(avatar, avatarX, avatarY, avatarSize, avatarSize);
 	.setTimestamp()
 	.setFooter({ text: `${member.guild.name}`, iconURL: `${sunucuiconurl}`})
 	 
-	embed222.setImage('attachment://904.png');
+	embed222.setImage('attachment://Hawk.png');
 
 	if (months < 1 && years < 1) {
-		const butonalttantire904 = new ActionRowBuilder()
+		const butonalttantireHawk = new ActionRowBuilder()
 		.addComponents(
 			new ButtonBuilder()
-		 .setCustomId("butonalttantire904")
+		 .setCustomId("butonalttantireHawk")
 		 .setLabel('⚠ Kullanıcıyı Yasakla! (Şüpheli Hesap)')
 		 .setStyle(ButtonStyle.Secondary),
 		)
-		log3.send({ embeds: [exampleEmbed], components: [butonalttantire904], content: `> \`🤍\` ${member} **/** \`${member.id}\``, files: [attachment] });
+		log3.send({ embeds: [exampleEmbed], components: [butonalttantireHawk], content: `> \`🤍\` ${member} **/** \`${member.id}\``, files: [attachment] });
 	}
 	else
 	{
@@ -1620,11 +1620,11 @@ ctx.drawImage(avatar, avatarX, avatarY, avatarSize, avatarSize);
 		
 		
 
-		if(modal.customId === 'modal-904s'){
+		if(modal.customId === 'modal-Hawks'){
 
-			const ilkseçenek = modal.getTextInputValue('904s-2')
-			const ikinciseçenek = modal.getTextInputValue('904s-3')
-			const üçüncüseçenek = modal.getTextInputValue('904s-4')
+			const ilkseçenek = modal.getTextInputValue('Hawks-2')
+			const ikinciseçenek = modal.getTextInputValue('Hawks-3')
+			const üçüncüseçenek = modal.getTextInputValue('Hawks-4')
 
 			await modal.deferReply({ ephemeral: true })
 
@@ -1735,7 +1735,7 @@ modal.reply({embeds: [embed5555]})
 
 }
 
-		if(modal.customId === '904modal'){
+		if(modal.customId === 'Hawkmodal'){
 			const botid = modal.getTextInputValue('kullaniciid')
 
 			const user =  await modal.guild.members.cache.get(`${botid}`)
@@ -1747,7 +1747,7 @@ modal.reply({embeds: [embed5555]})
 			await modal.channel.permissionOverwrites.edit(botid, { ViewChannel: true, SendMessages: true, AttachFiles: true });
 			modal.reply(`> **<@${botid}> Adlı Kişi Başarıyla Kanala Eklendi.**`)
 		}
-		if(modal.customId === '904modal2'){
+		if(modal.customId === 'Hawkmodal2'){
 			const botid2 = modal.getTextInputValue('rolid')
 
 			const user =  await modal.guild.roles.cache.get(`${botid2}`)
@@ -1825,7 +1825,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`Ticket Kategori\` \n\n- **Eski Kanal Bilgisi:** ${ticketkategori} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -1858,7 +1858,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`ticket-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -1889,7 +1889,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`kayıt-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -1920,7 +1920,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`whitelistçıkış-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -1951,7 +1951,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`rol-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -1982,7 +1982,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`ban-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -2013,7 +2013,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`unban-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -2044,7 +2044,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`ses-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -2075,7 +2075,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`ekip-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -2106,7 +2106,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`mesaj-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -2137,7 +2137,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`giriş-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 			const row2 = new ActionRowBuilder()
@@ -2167,7 +2167,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`kanal-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 			const row2 = new ActionRowBuilder()
@@ -2197,7 +2197,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`başvuru-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 			const row2 = new ActionRowBuilder()
@@ -2227,7 +2227,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`reklam-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 			const row2 = new ActionRowBuilder()
@@ -2257,7 +2257,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`uyarı-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -2288,7 +2288,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Log Verisi:** \`bildirim-log\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Log Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -2318,7 +2318,7 @@ modal.reply({embeds: [embed5555]})
 
 			const embed = new EmbedBuilder()
 			.setDescription(`**Ayarlanan Kanal Verisi:** \`Bot-Ses-Giris\` \n\n- **Eski Kanal Bilgisi:** ${ticketkanali} \n\n> **Kanal Verileri Seçtiğiniz <#${interaction.values}> / \`${interaction.values}\` İsimli Kanal'a Taşındı! \`✅\`**`)
-			.setFooter({text: `904 Development`, iconURL: `${interaction.guild.iconURL()}`})
+			.setFooter({text: `Hawk Development`, iconURL: `${interaction.guild.iconURL()}`})
 			.setTimestamp()
 
 
@@ -2339,7 +2339,7 @@ modal.reply({embeds: [embed5555]})
 
 
 		const dokuzdortmodal = new Modal() 
-		.setCustomId('904modal')
+		.setCustomId('Hawkmodal')
 		.setTitle(`Kullanıcı Ekleme`)
 		.addComponents(
 		  new TextInputComponent() 
@@ -2353,7 +2353,7 @@ modal.reply({embeds: [embed5555]})
 		)
 
 		const dokuzdortmodal2 = new Modal() 
-		.setCustomId('904modal2')
+		.setCustomId('Hawkmodal2')
 		.setTitle(`Rol Ekleme`)
 		.addComponents(
 		  new TextInputComponent() 
@@ -2378,15 +2378,15 @@ modal.reply({embeds: [embed5555]})
 			  })
 		}
 
-		if(interaction.customId == "butonalttantire904")
+		if(interaction.customId == "butonalttantireHawk")
 		{
-			if(!interaction.member.roles.cache.get(yetkiliekibi)) return interaction.reply({content: `> \`❌\` **Başını Kullanırsın. 904 :)**`, ephemeral: true})
+			if(!interaction.member.roles.cache.get(yetkiliekibi)) return interaction.reply({content: `> \`❌\` **Başını Kullanırsın. Hawk :)**`, ephemeral: true})
 
 
-			const butonalttantire9042 = new ActionRowBuilder()
+			const butonalttantireHawk2 = new ActionRowBuilder()
 			.addComponents(
 			new ButtonBuilder()
-			.setCustomId("butonalttantire9042")
+			.setCustomId("butonalttantireHawk2")
 			.setLabel(`⚠ Kullanıcı Yasaklandı! ${interaction.user.id}`)
 			.setDisabled(true)
 			.setStyle(ButtonStyle.Secondary),
@@ -2395,15 +2395,15 @@ modal.reply({embeds: [embed5555]})
 			const member = await interaction.guild.members.fetch(mentionedUsers.id);
 			if(!member.bannable) return interaction.reply({content: `> \`❌\` **Kullanıcıyı Banlamak İçin Yetkim Yok.**`, ephemeral: true})
 			await member.ban({ reason: `${interaction.user.id} Yetkili Tarafından Şüpheli Hesap Ban!` });
-			interaction.update({components: [butonalttantire9042]})
+			interaction.update({components: [butonalttantireHawk2]})
 
 		}
-		const modalama904 = new Modal() 
-		.setCustomId('modal-904s')
+		const modalamaHawk = new Modal() 
+		.setCustomId('modal-Hawks')
 		.setTitle(`${config.sunucuismi} Ticket`)
 		.addComponents(
 			new TextInputComponent() 
-			.setCustomId('904s-2')
+			.setCustomId('Hawks-2')
 			.setLabel('Neden Ticket Açıyorsunuz?')
 			.setStyle('LONG') 
 			.setMinLength(1)
@@ -2413,7 +2413,7 @@ modal.reply({embeds: [embed5555]})
 		  )
 		  .addComponents(
 			new TextInputComponent() 
-			.setCustomId('904s-3')
+			.setCustomId('Hawks-3')
 			.setLabel('Ticketınız Hakkında Sorununuz?')
 			.setStyle('LONG') 
 			.setMinLength(1)
@@ -2423,7 +2423,7 @@ modal.reply({embeds: [embed5555]})
 		  )
 		  .addComponents(
 			new TextInputComponent() 
-			.setCustomId('904s-4')
+			.setCustomId('Hawks-4')
 			.setLabel('Hangi Yetkililer Size Yardımcı Olabilir?')
 			.setStyle('LONG') 
 			.setMinLength(1)
@@ -2435,7 +2435,7 @@ modal.reply({embeds: [embed5555]})
 		if(interaction.customId === 'denemeticket')
 		{
 
-			showModal(modalama904, {
+			showModal(modalamaHawk, {
 				client: client, 
 				interaction: interaction 
 			  })
@@ -2824,7 +2824,7 @@ try {
 		.setThumbnail(`${message.member.displayAvatarURL()}`) 
 		.setFooter({text: `${message.member.displayName}`, iconURL: `${message.member.displayAvatarURL()}`}) 
 		.setTimestamp()
-		.setColor('BLACK')
+		.setColor('#000000')
 		logChannel.send({embeds: [embed]});
 	  } else {
 		return;
@@ -2834,7 +2834,7 @@ try {
 	const embed2 = new EmbedBuilder()
 	.setTitle(`Kullanıcı Belirtilen Kanalda Mesaj Sildi!`)
 	.setAuthor({name: `${message.guild.name}`, iconURL: `${sunucuiconurl}`})
-	.setColor("BLACK")
+	.setColor("#000000")
 	.setDescription(`> **Bir Sorun Oluştu Yazıları Alamadım!**`)
 	.setTimestamp();
 
@@ -2896,7 +2896,7 @@ try {
 	const embed = new EmbedBuilder()
 	  .setTitle(`Kullanıcı ${oldMessage.channel} Kanalında Mesajını Düzenledi \`❗\``)
 	  .setAuthor({name: `${oldMessage.guild.name}`, iconURL: `${sunucuiconurl}`})
-	  .setColor("BLACK")
+	  .setColor("#000000")
 	  .setThumbnail(`${oldMessage.member.displayAvatarURL()}`) 
 	  .setDescription(`> **Kullanıcı:** ${oldMessage.author} \n> \n> **Mesajın Düzenlendiği Kanal:** <#${channel.id}>\n> \n> **Önceki Mesajı:** ${oldMessage.content} \n> \n> **Yeni Mesaj:** ${newMessage.content}\n> \n> **Silen Kişi ID:** ${oldMessage.member.id} / ${oldMessage.author.tag}`)
 	  .setFooter({text: `${oldMessage.member.displayName}`, iconURL: `${oldMessage.member.displayAvatarURL()}`}) 
@@ -2907,7 +2907,7 @@ try {
 	const embed2 = new EmbedBuilder()
 	.setTitle("Kullanıcı Belirtilen Kanalda Mesaj Düzenledi!")
 	.setAuthor({name: `${oldMessage.guild.name}`, iconURL: `${sunucuiconurl}`})
-	.setColor("BLACK")
+	.setColor("#000000")
 	.setDescription(`> **Bir Sorun Oluştu Yazıları Alamadım!**`)
 	.setTimestamp();
 
@@ -2925,7 +2925,7 @@ try {
 
 		const embed = new EmbedBuilder()
 		.setTimestamp()
-		.setColor(`Black`)
+		.setColor(`#000000`)
 
 		if(oldState.id === config.botid || newState.id === config.botid) return;
 
@@ -2945,7 +2945,7 @@ try {
 
         if (!oldState.channel && newState.channel) {
 			embed.setDescription(`> **${newState.member.displayName} Kullanıcısı \`${newState.channel.name}\` Adlı Ses Kanalına Giriş Yaptı \`❗\`**`)
-			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://904.com.tr/resimler/904_ses_girdi.png`})
+			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://Hawk.com.tr/resimler/Hawk_ses_girdi.png`})
 			embed.setFooter({text: `${newState.guild.name}`})
 			log.send({embeds: [embed]});
 			return
@@ -2953,7 +2953,7 @@ try {
         if (oldState.channel && !newState.channel)
 		{
 			embed.setDescription(`> **${oldState.member.displayName} Kullanıcısı \`${oldState.channel.name}\` Adlı Ses Kanalından Çıkış Yaptı \`❗\`**`)
-			embed.setAuthor({name: `${oldState.guild.name}`, iconURL: `https://904.com.tr/resimler/904_ses_cikti.png`})
+			embed.setAuthor({name: `${oldState.guild.name}`, iconURL: `https://Hawk.com.tr/resimler/Hawk_ses_cikti.png`})
 			embed.setFooter({text: `${oldState.guild.name}`})
 			log.send({embeds: [embed]});
 			return;
@@ -2961,7 +2961,7 @@ try {
         if (oldState.channel.id && newState.channel.id && oldState.channel.id != newState.channel.id)
 		{
 			embed.setDescription(`> **${newState.member.displayName} Kullanıcısı Ses Kanalını Değiştirdi \`❗\`** \n> \n> **(Eski Kanal: \`${oldState.channel.name}\` => Yeni Kanal: \`${newState.channel.name}\`)**`)
-			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://904.com.tr/resimler/904_ses_girdi.png`})
+			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://Hawk.com.tr/resimler/Hawk_ses_girdi.png`})
 			embed.setFooter({text: `${newState.guild.name}`})
 			log.send({embeds: [embed]});
 			return;
@@ -2970,7 +2970,7 @@ try {
         if (oldState.channel.id && oldState.selfMute && !newState.selfMute) 
 		{
 			embed.setDescription(`> **${newState.member.displayName} Kullanıcısı \`${newState.channel.name}\` Adlı Ses Kanalında Kendi Susturmasını Kaldırdı \`❗\`**`)
-			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://904.com.tr/resimler/904_mikrofon_acik.png`})
+			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://Hawk.com.tr/resimler/Hawk_mikrofon_acik.png`})
 			embed.setFooter({text: `${newState.guild.name}`})
 			log.send({embeds: [embed]});
 			return;
@@ -2978,7 +2978,7 @@ try {
         if (oldState.channel.id && !oldState.selfMute && newState.selfMute)
 		{ 
 			embed.setDescription(`> **${newState.member.displayName} Kullanıcısı \`${newState.channel.name}\` Adlı Ses Kanalında Kendini Susturdu \`❗\`**`)
-			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://904.com.tr/resimler/904_mikrofon_kapali.png`})
+			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://Hawk.com.tr/resimler/Hawk_mikrofon_kapali.png`})
 			embed.setFooter({text: `${newState.guild.name}`})
 			log.send({embeds: [embed]});
 			return;
@@ -2986,7 +2986,7 @@ try {
         if (oldState.channel.id && !oldState.streaming && newState.channel.id && newState.streaming)
 		{
 			embed.setDescription(`> **${newState.member.displayName} Kullanıcısı \`${newState.channel.name}\` Adlı Ses Kanalında Yayın Açtı \`❗\`**`)
-			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://904.com.tr/resimler/904_yayin_acik.png`})
+			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://Hawk.com.tr/resimler/Hawk_yayin_acik.png`})
 			embed.setFooter({text: `${newState.guild.name}`})
 			log.send({embeds: [embed]});
 			return;
@@ -2994,7 +2994,7 @@ try {
         if (oldState.channel.id && oldState.streaming && newState.channel.id && !newState.streaming)
 		{
 			embed.setDescription(`> **${newState.member.displayName} Kullanıcısı \`${newState.channel.name}\` Adlı Ses Kanalında Yayını Kapattı \`❗\`**`)
-			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://904.com.tr/resimler/904_yayin_kapali.png`})
+			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://Hawk.com.tr/resimler/Hawk_yayin_kapali.png`})
 			embed.setFooter({text: `${newState.guild.name}`})
 			log.send({embeds: [embed]});
 			return;
@@ -3002,7 +3002,7 @@ try {
         if (oldState.channel.id && !oldState.selfVideo && newState.channel.id && newState.selfVideo)
 		{ 
 			embed.setDescription(`> **${newState.member.displayName} Kullanıcısı \`${newState.channel.name}\` Adlı Ses Kanalında Kamera Açtı \`❗\`**`)
-			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://904.com.tr/resimler/904_kamera_acik.png`})
+			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://Hawk.com.tr/resimler/Hawk_kamera_acik.png`})
 			embed.setFooter({text: `${newState.guild.name}`})
 			log.send({embeds: [embed]});
 			return;
@@ -3010,7 +3010,7 @@ try {
         if (oldState.channel.id && oldState.selfVideo && newState.channel.id && !newState.selfVideo)
 		{
 			embed.setDescription(`> **${newState.member.displayName} Kullanıcısı \`${newState.channel.name}\` Adlı Ses Kanalında Kamerasını Kapattı \`❗\`**`)
-			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://904.com.tr/resimler/904_kamera_kapali.png`})
+			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://Hawk.com.tr/resimler/Hawk_kamera_kapali.png`})
 			embed.setFooter({text: `${newState.guild.name}`})
 			log.send({embeds: [embed]});
 			return;
@@ -3018,7 +3018,7 @@ try {
 		if (oldState.channel.id && oldState.selfDeaf && !newState.selfDeaf)
 		{ 
 			embed.setDescription(`> **${newState.member.displayName} Kullanıcısı \`${newState.channel.name}\` Adlı Ses Kanalında Kendi Sağırlaştırmasını Kaldırdı \`❗\`**`)
-			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://904.com.tr/resimler/904_kulaklik_acik.png`})
+			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://Hawk.com.tr/resimler/Hawk_kulaklik_acik.png`})
 			embed.setFooter({text: `${newState.guild.name}`})
 			log.send({embeds: [embed]});
 			return;
@@ -3026,7 +3026,7 @@ try {
         if (oldState.channel.id && !oldState.selfDeaf && newState.selfDeaf) 
 		{ 
 			embed.setDescription(`> **${newState.member.displayName} Kullanıcısı \`${newState.channel.name}\` Adlı Ses Kanalında Kendini Sağırlaştırdı \`❗\`**`)
-			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://904.com.tr/resimler/904_kulaklik_kapali.png`})
+			embed.setAuthor({name: `${newState.guild.name}`, iconURL: `https://Hawk.com.tr/resimler/Hawk_kulaklik_kapali.png`})
 			embed.setFooter({text: `${newState.guild.name}`})
 			log.send({embeds: [embed]});
 			return;
@@ -3133,7 +3133,7 @@ console.log(`Başarıyla Sesli Kanala Katıldı: ${targetChannel.name}`);
 			{
 
 				console.log(`Kişi Bot ${member.user.id}`)
-				const reason = `904 Anti Raid Sistem`
+				const reason = `Hawk Anti Raid Sistem`
 				await member2.ban({ reason });
 			
 			}
@@ -3166,7 +3166,7 @@ console.log(`Başarıyla Sesli Kanala Katıldı: ${targetChannel.name}`);
         			const antireklam = SistemDatabase.map(sistem => sistem.antireklam).join(', ')
 					if(antireklam !== 'true') return
 
-					const reklam904 = new EmbedBuilder()
+					const reklamHawk = new EmbedBuilder()
 					.setAuthor({name: `${message.guild.name}`, iconURL: `${message.guild.iconURL()}`})
 					.setDescription(`> **Kişi Bilgileri: ${message.author} / ${message.author.id}**\n\n> **Yapılan Reklam:** ${message.content}`)
 					.setThumbnail(message.author.displayAvatarURL())
@@ -3183,7 +3183,7 @@ console.log(`Başarıyla Sesli Kanala Katıldı: ${targetChannel.name}`);
 					const reklamkanalımız = reklamkanalid.join(', ')
 					const kanal = message.guild.channels.cache.get(reklamkanalımız)
 					if(!kanal) return console.log(`reklam-log İsimli Log Kanalı Sunucuda Mevcut Değil! ❌`,)
-				  await kanal.send({embeds: [reklam904], content: `<@&${config.banhammer}> / <@&${config.yetkiliekibi}>`})
+				  await kanal.send({embeds: [reklamHawk], content: `<@&${config.banhammer}> / <@&${config.yetkiliekibi}>`})
 				  }
 
 		})
@@ -3216,7 +3216,7 @@ console.log(`Başarıyla Sesli Kanala Katıldı: ${targetChannel.name}`);
         			const antireklam = SistemDatabase.map(sistem => sistem.antireklam).join(', ')
 					if(antireklam !== 'true') return
 
-					const reklam904 = new EmbedBuilder()
+					const reklamHawk = new EmbedBuilder()
 					.setAuthor({name: `${NewMessage.guild.name}`, iconURL: `${NewMessage.guild.iconURL()}`})
 					.setDescription(`> **Kişi Bilgileri: ${NewMessage.author} / ${NewMessage.author.id}**\n\n> **Düzenlenerek Yapılan Reklam:** ${NewMessage.content}`)
 					.setThumbnail(NewMessage.author.displayAvatarURL())
@@ -3233,7 +3233,7 @@ console.log(`Başarıyla Sesli Kanala Katıldı: ${targetChannel.name}`);
 					const reklamkanalımız = reklamkanalid.join(', ')
 					const kanal = NewMessage.guild.channels.cache.get(reklamkanalımız)
 					if(!kanal) return console.log(`reklam-log İsimli Log Kanalı Sunucuda Mevcut Değil! ❌`,)		
-				  await kanal.send({embeds: [reklam904], content: `<@&${config.banhammer}> / <@&${config.yetkiliekibi}>`})
+				  await kanal.send({embeds: [reklamHawk], content: `<@&${config.banhammer}> / <@&${config.yetkiliekibi}>`})
 				  }
 
 		})
@@ -3321,7 +3321,7 @@ console.log(`Başarıyla Sesli Kanala Katıldı: ${targetChannel.name}`);
 				  .setAuthor({name: `${newMember.displayName}`, iconURL: `${newMember.displayAvatarURL()}`})
 				  .setImage(`${sunucubanner}`)
 				  .setThumbnail(`${newMember.displayAvatarURL()}`)
-				  .setColor(`Black`)
+				  .setColor(`#000000`)
 				  .setDescription(`> **Alınan Kullanıcı Bilgileri:** ${newMember}\n \`\`\`${newMember.displayName} / ${newMember.id}\`\`\`\n> **Alınan Rol ve Rol ID:** ${role} **/** ${role.id}\n> \n> **Alan Kişi Bilgileri:** ${executor} **/** ${executor.id}`)
 				  .setFooter({text: `Rolü Alan Kişi: ${executor.tag}`, iconURL: `${executor.displayAvatarURL()}`}) 
 				kanal.send({ embeds: [embed] });
@@ -3359,7 +3359,7 @@ console.log(`Başarıyla Sesli Kanala Katıldı: ${targetChannel.name}`);
 					await message.react(TICK_EMOJI);
 					await message.react(RED_EMOJI);
 		  } catch (error) {
-			  return console.log('\x1b[31m', `Otomatik İsim Düzenleme Komutunda Sorun Oluştu! (904 Development)`)
+			  return console.log('\x1b[31m', `Otomatik İsim Düzenleme Komutunda Sorun Oluştu! (Hawk Development)`)
 		  }
 		  
 				  
@@ -3467,7 +3467,7 @@ client.on("messageCreate", async message => {
 					await message.react(TICK_EMOJI);
 					await message.react(RED_EMOJI);
 		  } catch (error) {
-			  return console.log('\x1b[31m', `Otomatik Perm Verme İsteğinde Sorun Oluştu! (904 Development)`)
+			  return console.log('\x1b[31m', `Otomatik Perm Verme İsteğinde Sorun Oluştu! (Hawk Development)`)
 		  }
 		  
 				  
@@ -3593,7 +3593,7 @@ await user.roles.add(roleName)
 				  const message = reaction.message;
 				  console.log(error)
 			  
-				  await reaction.message.reply(`> **Lütfen Format Biçimini Düzgün Kullanın! <@1135956637128077403> <@1193910729590452356> Şeklinde Etiketleme Yapın.**`)
+				  await reaction.message.reply(`> **Lütfen Format Biçimini Düzgün Kullanın! <@1135956637128077403> <@11939107295Hawk52356> Şeklinde Etiketleme Yapın.**`)
 				  await message.reactions.removeAll()
 			  return;
 			  }
@@ -3617,7 +3617,7 @@ await user.roles.add(roleName)
 						if(executorid.id === botid) return;
 
 
-						const izinler904 = {
+						const izinlerHawk = {
 							'CreateInstantInvite': 'Davet Oluştur',
 							'KickMembers': 'Üyeleri At',
 							'BanMembers': 'Üyeleri Yasakla',
@@ -3661,14 +3661,14 @@ await user.roles.add(roleName)
 
 
 	
-						  const oldPermissions = oldRole.permissions.toArray().map(p => `${izinler904[p]}`).filter(Boolean).join(', ') || 'Yok';
-						  const newPermissions = newRole.permissions.toArray().map(p => `${izinler904[p]}`).filter(Boolean).join(', ') || 'Yok';
+						  const oldPermissions = oldRole.permissions.toArray().map(p => `${izinlerHawk[p]}`).filter(Boolean).join(', ') || 'Yok';
+						  const newPermissions = newRole.permissions.toArray().map(p => `${izinlerHawk[p]}`).filter(Boolean).join(', ') || 'Yok';
 					  
 
 						const channelInfoEmbed = new EmbedBuilder()
-						.setColor('Black')
+						.setColor('#000000')
 						.setAuthor({name: `${oldRole.name} Adlı Rol Düzenlendi.`, iconURL: `${oldRole.guild.iconURL()}`})
-						.setThumbnail(`https://904.com.tr/resimler/904_duzenleme.png`)
+						.setThumbnail(`https://Hawk.com.tr/resimler/Hawk_duzenleme.png`)
 						.addFields(
 							{ name: '**Eski Rol Adı**', value: `**\`\`\`${oldRole.name}\`\`\`**`, inline: true },
 							{ name: '**Yeni Rol Adı**', value: `**\`\`\`${newRole.name}\`\`\`**`, inline: true },
@@ -3704,9 +3704,9 @@ await user.roles.add(roleName)
 
 
 
-				client.on('roleCreate', async createdRole904 => {
+				client.on('roleCreate', async createdRoleHawk => {
 
-				const fetchedLogs = await createdRole904.guild.fetchAuditLogs({
+				const fetchedLogs = await createdRoleHawk.guild.fetchAuditLogs({
 					type: AuditLogEvent.RoleCreate,
 					limit: 1,
 				})
@@ -3715,17 +3715,17 @@ await user.roles.add(roleName)
 
 					const { executor,  } = firstEntry;
 
-					const executorid = await createdRole904.guild.members.fetch(executor.id)
+					const executorid = await createdRoleHawk.guild.members.fetch(executor.id)
 
 					if(executorid.id === botid) return;
 
 					const channelInfoEmbed = new EmbedBuilder()
 					
-						.setColor('Black')
-						.setAuthor({name: `${createdRole904.name} Adlı Rol Oluşturuldu ✅`, iconURL: `${createdRole904.guild.iconURL()}`})
-						.setThumbnail(`https://904.com.tr/resimler/904_rol_olusturma.png`)
-						.setDescription(`> **Oluşturulan Rol İsmi:** ${createdRole904} / ${createdRole904.name} \n\n> **Oluşturan Yetkili ID:** ${executorid.id} \n\n> **Oluşturulan Rol Tarihi:** <t:${parseInt(createdRole904.createdTimestamp / 1000)}:R> \n\n> **Oluşturan Yetkili Adı:** ${executor} \n\n **Oluşturan Yetkilinin Rolleri:** ${executorid.roles.cache.map(r => r).join(" ").replace("@everyone", " ") || "Rolleri Yok."}`)
-						.setFooter({text: `${createdRole904.guild.name}`, iconURL: `${createdRole904.guild.iconURL()}`})
+						.setColor('#000000')
+						.setAuthor({name: `${createdRoleHawk.name} Adlı Rol Oluşturuldu ✅`, iconURL: `${createdRoleHawk.guild.iconURL()}`})
+						.setThumbnail(`https://Hawk.com.tr/resimler/Hawk_rol_olusturma.png`)
+						.setDescription(`> **Oluşturulan Rol İsmi:** ${createdRoleHawk} / ${createdRoleHawk.name} \n\n> **Oluşturan Yetkili ID:** ${executorid.id} \n\n> **Oluşturulan Rol Tarihi:** <t:${parseInt(createdRoleHawk.createdTimestamp / 1000)}:R> \n\n> **Oluşturan Yetkili Adı:** ${executor} \n\n **Oluşturan Yetkilinin Rolleri:** ${executorid.roles.cache.map(r => r).join(" ").replace("@everyone", " ") || "Rolleri Yok."}`)
+						.setFooter({text: `${createdRoleHawk.guild.name}`, iconURL: `${createdRoleHawk.guild.iconURL()}`})
 						.setTimestamp();
 				
 
@@ -3738,16 +3738,16 @@ await user.roles.add(roleName)
 						const rolkanalid = rolLogs.map(log => log.rolLog)
 				  
 						const rolkanalımız = rolkanalid.join(', ')
-						const kanal = createdRole904.guild.channels.cache.get(rolkanalımız)
+						const kanal = createdRoleHawk.guild.channels.cache.get(rolkanalımız)
 						if(!kanal) return console.log(`\x1b[31m`,`> **\`rol-log\` İsimli Log Kanalı Sunucuda Mevcut Değil!** ❌`)
 				
 						kanal.send({embeds: [channelInfoEmbed]});
 
 				})
 
-				client.on('roleDelete', async deletedRole904 => {
+				client.on('roleDelete', async deletedRoleHawk => {
 
-					const fetchedLogs = await deletedRole904.guild.fetchAuditLogs({
+					const fetchedLogs = await deletedRoleHawk.guild.fetchAuditLogs({
 						type: AuditLogEvent.RoleCreate,
 						limit: 1,
 					})
@@ -3756,17 +3756,17 @@ await user.roles.add(roleName)
 	
 						const { executor,  } = firstEntry;
 	
-						const executorid = await deletedRole904.guild.members.fetch(executor.id)
+						const executorid = await deletedRoleHawk.guild.members.fetch(executor.id)
 	
 						if(executorid.id === botid) return;
 	
 						const channelInfoEmbed = new EmbedBuilder()
 						
-							.setColor('Black')
-							.setAuthor({name: `${deletedRole904.name} Adlı Rol Silindi ❗`, iconURL: `${deletedRole904.guild.iconURL()}`})
-							.setThumbnail(`https://904.com.tr/resimler/904_silme.png`)
-							.setDescription(`> **Silinen Rol İsmi:** ${deletedRole904.name} \n\n> **Silen Yetkili ID:** ${executorid.id} \n\n> **Silinen Rol Tarihi:** <t:${parseInt(deletedRole904.createdTimestamp / 1000)}:R> \n\n> **Silen Yetkilinin Adı:** ${executor} \n\n **Silen Yetkilinin Rolleri:** ${executorid.roles.cache.map(r => r).join(" ").replace("@everyone", " ") || "Rolleri Yok."}`)
-							.setFooter({text: `${deletedRole904.guild.name}`, iconURL: `${deletedRole904.guild.iconURL()}`})
+							.setColor('#000000')
+							.setAuthor({name: `${deletedRoleHawk.name} Adlı Rol Silindi ❗`, iconURL: `${deletedRoleHawk.guild.iconURL()}`})
+							.setThumbnail(`https://Hawk.com.tr/resimler/Hawk_silme.png`)
+							.setDescription(`> **Silinen Rol İsmi:** ${deletedRoleHawk.name} \n\n> **Silen Yetkili ID:** ${executorid.id} \n\n> **Silinen Rol Tarihi:** <t:${parseInt(deletedRoleHawk.createdTimestamp / 1000)}:R> \n\n> **Silen Yetkilinin Adı:** ${executor} \n\n **Silen Yetkilinin Rolleri:** ${executorid.roles.cache.map(r => r).join(" ").replace("@everyone", " ") || "Rolleri Yok."}`)
+							.setFooter({text: `${deletedRoleHawk.guild.name}`, iconURL: `${deletedRoleHawk.guild.iconURL()}`})
 							.setTimestamp();
 					
 	
@@ -3779,7 +3779,7 @@ await user.roles.add(roleName)
 							const rolkanalid = rolLogs.map(log => log.rolLog)
 					  
 							const rolkanalımız = rolkanalid.join(', ')
-							const kanal = deletedRole904.guild.channels.cache.get(rolkanalımız)
+							const kanal = deletedRoleHawk.guild.channels.cache.get(rolkanalımız)
 							if(!kanal) return console.log(`\x1b[31m`,`> **\`rol-log\` İsimli Log Kanalı Sunucuda Mevcut Değil!** ❌`)
 					
 							kanal.send({embeds: [channelInfoEmbed]});
@@ -3820,9 +3820,9 @@ await user.roles.add(roleName)
 					if(executorid.id === botid) return;
 
 					const channelInfoEmbed = new EmbedBuilder()
-						.setColor('Black')
+						.setColor('#000000')
 						.setAuthor({name: `${deletedChannel.guild.name} Adlı Sunucumuzda Kanal Silindi \`❗\``, iconURL: `${deletedChannel.guild.iconURL()}`})
-						.setThumbnail(`https://904.com.tr/resimler/904_silme.png`)
+						.setThumbnail(`https://Hawk.com.tr/resimler/Hawk_silme.png`)
 						.setDescription(`> **Silinen Kanal İsmi:** ${deletedChannel.name} \n\n> **Silinen Kanal Türü:** ${kanalTuru} \n\n> **Silen Yetkili ID:** ${executorid.id} \n\n> **Silen Yetkili Adı:** ${executor} \n\n **Silen Yetkilinin Rolleri:** ${executorid.roles.cache.map(r => r).join(" ").replace("@everyone", " ") || "Rolleri Yok."}`)
 						.setFooter({text: `${deletedChannel.guild.name}`, iconURL: `${deletedChannel.guild.iconURL()}`})
 				        .setTimestamp()
@@ -3879,9 +3879,9 @@ await user.roles.add(roleName)
 
 
 					const channelInfoEmbed = new EmbedBuilder()
-						.setColor('Black')
+						.setColor('#000000')
 						.setAuthor({name: `${createdChannel.name} Adlı Kanal Oluşturuldu ✅`, iconURL: `${createdChannel.guild.iconURL()}`})
-						.setThumbnail(`https://904.com.tr/resimler/904_kanal_olusturma.png`)
+						.setThumbnail(`https://Hawk.com.tr/resimler/Hawk_kanal_olusturma.png`)
 						.setDescription(`> **Oluşturulan Kanal İsmi:** ${createdChannel.name} \n\n> **Oluşturulan Kanal Türü:** ${kanalTuru} \n\n> **Oluşturulan Kanal Tarihi:** <t:${parseInt(createdChannel.createdTimestamp / 1000)}:R> \n\n> **Oluşturan Yetkili ID:** ${executorid.id} \n\n> **Oluşturan Yetkili Adı:** ${executor} \n\n **Oluşturan Yetkilinin Rolleri:** ${executorid.roles.cache.map(r => r).join(" ").replace("@everyone", " ") || "Rolleri Yok."}`)
 						.setFooter({text: `${createdChannel.guild.name}`, iconURL: `${createdChannel.guild.iconURL()}`})
 				
@@ -4066,9 +4066,9 @@ await user.roles.add(roleName)
 						  ssl: true,
 						  sslValidate: false,
 						});	
-					  console.log('\x1b[32m', 'MongoDB Bağlantısı Başarıyla Kuruldu. (904 Development)');
+					  console.log('\x1b[32m', 'MongoDB Bağlantısı Başarıyla Kuruldu. (Hawk Development)');
 					} catch (error) {
-					 return console.error('\x1b[31m', 'Mongourl Değeri Yanlış Lütfen Düzeltin. (904 Development)');
+					 return console.error('\x1b[31m', 'Mongourl Değeri Yanlış Lütfen Düzeltin. (Hawk Development)');
 					}
 				  }
 				  
@@ -4077,9 +4077,9 @@ await user.roles.add(roleName)
 				  async function connectToToken() {
 					try {
 					  await client.login(token)
-					  console.log('\x1b[32m', 'Token Bağlantısı Başarıyla Kuruldu. (904 Development)');
+					  console.log('\x1b[32m', 'Token Bağlantısı Başarıyla Kuruldu. (Hawk Development)');
 					} catch (error) {
-					 return console.error('\x1b[31m', 'Token Değeri Yanlış Lütfen Config.js Dosyasından Düzeltin. (904 Development)');
+					 return console.error('\x1b[31m', 'Token Değeri Yanlış Lütfen Config.js Dosyasından Düzeltin. (Hawk Development)');
 					}
 				  }
 				  

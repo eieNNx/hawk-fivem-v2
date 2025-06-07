@@ -131,7 +131,7 @@ if (foundUsersCount === 0) {
 
 } catch (error) {
 console.log(`Kaydedilenrolver Komutunda Sorun Oluştu ${error}`)
-return interaction.reply(`Üzgünüm Bir Sorun Oluştu 904'e Söyle. \`💥\``) 
+return interaction.reply(`Üzgünüm Bir Sorun Oluştu Hawk Development ile İletişime Geçin. \`💥\``) 
 }
 
     }

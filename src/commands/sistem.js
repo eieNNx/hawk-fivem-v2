@@ -60,14 +60,14 @@ module.exports = {
             if(botkontrol !== 'Açık2') 
             {
                 await db.set("anti-bot+",  "Açık2" );
-                embed.setDescription(`> **904 Anti-Bot Engelleme Sistemi Başarıyla Açıldı!** \`✅\``)
+                embed.setDescription(`> **Hawk Anti-Bot Engelleme Sistemi Başarıyla Açıldı!** \`✅\``)
                 embed.setThumbnail(`https://media.discordapp.net/attachments/837692675511287840/1191530657764098188/904botengelack.png?ex=65a5c666&is=65935166&hm=35771db4f704989d22c6d7072929028dcb27052215e01455658378e1445146cc&=&format=webp&quality=lossless`)
     
                 return await interaction.editReply({embeds: [embed]});
             }
             else {
                 await db.set("anti-bot+",  "Kapalı2" );
-                embed.setDescription(`> **904 Anti-Bot Engelleme Sistemi Başarıyla Kapandı!** \`❌\``)
+                embed.setDescription(`> **Hawk Anti-Bot Engelleme Sistemi Başarıyla Kapandı!** \`❌\``)
                 embed.setThumbnail(`https://media.discordapp.net/attachments/837692675511287840/1191530658686849144/904botengelkapal.png?ex=65a5c666&is=65935166&hm=366673e25138ca757cf9f93c82765590f15e22cf01e06007bae7f9a2bde840d4&=&format=webp&quality=lossless`)
                 return await interaction.editReply({embeds: [embed]});
             }
